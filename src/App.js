@@ -26,17 +26,28 @@ function App() {
   const decrease10 = () => {
     dispatch({ type: 'DECREMENT10' });
   };
+  const reset = () => {
+    dispatch({ type: 'RESET' });
+  };
   return (
     <div className="container">
+      <h1>{count}</h1>
       <div className="wrap">
-        <h1>{count}</h1>
-
-        <button onClick={increase}>▲</button>
-        <button onClick={decrease}>▼</button>
-        <button onClick={increase10}>10 up!</button>
-        <button onClick={decrease10}>10 down!</button>
-        {/* <button onClick={login}>LOGIN</button> */}
-        {/* <Box /> */}
+        <button className="nes-btn is-normal" onClick={increase}>
+          ▲
+        </button>
+        <button className="nes-btn is-normal" onClick={decrease}>
+          ▼
+        </button>
+        <button className="nes-btn is-normal" onClick={increase10}>
+          10 up!
+        </button>
+        <button className="nes-btn is-normal" onClick={decrease10}>
+          10 down!
+        </button>
+        <button className="nes-btn is-normal" onClick={reset}>
+          RESET
+        </button>
       </div>
     </div>
   );

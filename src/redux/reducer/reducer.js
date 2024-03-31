@@ -22,6 +22,8 @@ function reducer(state = initialState, action) {
       return { ...state, count: state.count - 1 };
     case 'DECREMENT10':
       return { ...state, count: state.count - 10 };
+    case 'RESET':
+      return { ...state, count: 0 };
     default:
       return { ...state };
   }
