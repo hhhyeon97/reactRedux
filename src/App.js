@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
 
   const increase = () => {
-    setCount(count + 1);
+    dispatch({ type: 'INCREMENT' });
+    // setCount(count + 1);
   };
   return (
     <div className="container">
