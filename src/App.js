@@ -1,7 +1,7 @@
 import './App.css';
 //import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Box from './component/Box';
+//import Box from './component/Box';
 
 function App() {
   // const [count, setCount] = useState(0);
